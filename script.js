@@ -21,4 +21,31 @@ for (let i = 1; i <= 100; i++) {
 }
 
 
-//
+//Prime Time
+// Chose an arbitrary number
+let n = 9;
+
+// Start testing from n + 1
+let current = n + 1;
+let found = false;
+
+// Check if current is prime
+while (!found) {
+  let isPrime = true;
+
+  // Test divisibility from 2 to current - 1
+  for (let i = 2; i < current; i++) {
+    if (current % i === 0) {
+      isPrime = false;
+      console.log(`${current} is divisible by ${i}`); // test
+      break;
+    }
+  }
+
+  if (isPrime) {
+    console.log(`Next prime number after ${n} is: ${current}`);
+    found = true;
+  } else {
+    current++;
+  }
+}
