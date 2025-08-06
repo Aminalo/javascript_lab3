@@ -21,7 +21,7 @@ for (let i = 1; i <= 100; i++) {
 }
 
 
-//Prime Time
+//Part2: Prime Time
 // Chose an arbitrary number
 let n = 9;
 
@@ -49,7 +49,9 @@ while (!found) {
     current++;
   }
 }
-//Feeling loopy
+
+
+//Part 3: Feeling loopy
 
 // Exemple de chaîne CSV
 let csvData = "ID, Name, Occupation, Age\n42, Bruce, Knight, 41\n57, Bob, Fry Cook, 19\n63, Blaine, Quiz Master, 58\n98, Bill, Doctor's Assistant, 26";
