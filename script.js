@@ -49,3 +49,45 @@ while (!found) {
     current++;
   }
 }
+//Feeling loopy
+
+// Exemple de chaîne CSV
+let csvData = "ID, Name, Occupation, Age\n42, Bruce, Knight, 41\n57, Bob, Fry Cook, 19\n63, Blaine, Quiz Master, 58\n98, Bill, Doctor's Assistant, 26";
+
+// Variables pour stocker les cellules
+let cell1 = "";
+let cell2 = "";
+let cell3 = "";
+let cell4 = "";
+let cellCount = 1;
+
+// Lire caractère par caractère
+for (let i = 0; i < csvData.length; i++) {
+  let char = csvData[i];
+
+  if (char === ",") {
+    cellCount++;
+  } else if (char === "\n") {
+    console.log(cell1, cell2, cell3, cell4); // Affiche une ligne
+    // Réinitialiser
+    cell1 = "";
+    cell2 = "";
+    cell3 = "";
+    cell4 = "";
+    cellCount = 1;
+  } else {
+    // Stocker les caractères dans la bonne cellule
+    if (cellCount === 1) {
+      cell1 += char;
+    } else if (cellCount === 2) {
+      cell2 += char;
+    } else if (cellCount === 3) {
+      cell3 += char;
+    } else if (cellCount === 4) {
+      cell4 += char;
+    }
+  }
+}
+
+// 🧪 Test final pour la dernière ligne qui ne finit pas avec "\n"
+console.log(cell1, cell2, cell3, cell4); 
